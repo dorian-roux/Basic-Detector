@@ -7,12 +7,15 @@
 
 <!-- Demonstration -->
 ## I. Demonstration
-
 <img src="../static/demonstration-scripts.gif" alt="Demonstration"/>     
 
-Lien to the interface folder [here](test.gif)
-> GIF
 
+<!-- Description -->
+## II. Description
+The **_scripts_** directory contains the source code of the **_Basic Detector_**. It is a Python script that allows you to detect objects in images, videos, or through a webcam. The script uses the **_YOLOv3_** model to perform the detection process. The script is divided into several modules, each of which is responsible for a specific task. 
+- **_main.py_** file is the entry point of the script. It allows you to choose the type of detection you want to perform (image, video, or webcam). 
+- **_detection.py_** file contains the main functions used to perform the detection process. 
+- **_image.py_**, **_video.py_**, and **_webcam.py_** files contain the functions used to detect objects in images, videos, and through a webcam, respectively.
 
 <!-- Structure -->
 ## III. Structure
@@ -33,11 +36,6 @@ The structure of the **_scripts_** directory is described below. It contains the
 │   └── webcam.py
 └── utils.py
 ```
-
-<!-- Description -->
-### Description
-
-
 
 <!-- Usage -->
 ## IV. Usage
