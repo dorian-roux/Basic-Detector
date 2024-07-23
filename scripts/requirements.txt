@@ -1,0 +1,12 @@
+#################################
+# Python Requirements | SCRIPTS #
+#################################
+
+# Video, Audio, DL and ML
+moviepy
+opencv-python
+opencv-python-headless
+ultralytics
+
+# Utilities 
+tqdm
