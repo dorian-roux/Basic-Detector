@@ -72,11 +72,13 @@ def launch_process():
             weights = json.loads(weights)
         if not isinstance(weights, list):
             weights = list(weights.values())
+        confidence = float(request.json.get('confidence'))
+        ioU = float(request.json.get('iou'))      
     except:
         return jsonify({"error": "Weights not found"}), 404
         
     # Save the Process Data
-    save_job_data(pathFolderTmp, job_id, {"PROGRESS": 0, "WEIGHTS": weights, "RESULT": ""})
+    save_job_data(pathFolderTmp, job_id, {"PROGRESS": 0, "WEIGHTS": weights, "CONFIDENCE": confidence, "IOU": ioU, "RESULT": ""})
 
     # Return the Job ID
     return jsonify({"job_id": job_id}), 200

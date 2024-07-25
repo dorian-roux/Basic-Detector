@@ -7,6 +7,18 @@
                 "Buttons": {
                     "All": "All Categories"
                 }
+            },
+            "Confidence": {
+                "Title": "Confidence Threshold",
+                "Input": {
+                    "Placeholder": "Enter a Confidence Threshold"
+                }
+            },
+            "IoU": {
+                "Title": "Intersection over Union Threshold",
+                "Input": {
+                    "Placeholder": "Enter an Intersection over Union Threshold"
+                }
             }
         },
         "Carousel": {
@@ -37,8 +49,7 @@
                 "Title": "Display Management",
                 "List": {
                     "Original": "Original Video",
-                    "Detection": "Video with Detections",
-                    "Comparison": "Video Comparison"
+                    "Detection": "Video with Detections"
                 }
             },
             "Original": {

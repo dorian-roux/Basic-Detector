@@ -29,7 +29,8 @@ export default function Core({contentCore, weights, setWeights}: {contentCore: a
     
     const [displayOpts, setDisplayOpts] = useState(Object.keys(GetValueFromKeys(contentCore, 'Results/DisplayOptions/List')).reduce((acc: any, key: string, index: number) => (acc[key] = index === 1, acc), {}));
     const [slctCategories, setSlctCategories] = useState<string[]>([]);
-    
+    const [slctConfidence, setSlctConfidence] = useState<number>(60);
+    const [slctIOU, setSlctIOU] = useState<number>(80);
 
     // Handlers //
     // - Handle Display Options Change - //
@@ -77,6 +78,17 @@ export default function Core({contentCore, weights, setWeights}: {contentCore: a
         return Object.fromEntries(Object.entries(weights).filter(([_, value]) => slctCategories.includes(GetValueFromKeys(value, 'NAME'))));
     };
 
+    const handleInputChanges = (e: any, setValue: any) => {
+        const value = e.target.value;
+        if (!isNaN(value)) {
+            if (/^\d+$/.test(value)) {
+                if (parseInt(value) >= 0 && parseInt(value) <= 100) {
+                    setValue(value);
+                };
+            }
+        };
+    };
+
     // - Filtered Weights - //
     const filteredWeights = filterWeights(weights, slctCategories);
 
@@ -110,10 +122,24 @@ export default function Core({contentCore, weights, setWeights}: {contentCore: a
                             </div>
                         </div>
                     )}
+                    <div className='confidence-option'>
+                        <p className='copt-title'>{GetValueFromKeys(contentCore, 'Sidebar/Confidence/Title')}</p>
+                        <div className='copt-content'>
+                            <input type="range" min="0" max="100" value={slctConfidence} onChange={(e) => setSlctConfidence(parseInt(e.target.value))} className='copt-ipt-range'/>
+                            <input type="number" min="0" max="100" id="copt-input" value={slctConfidence} onChange={(e) => handleInputChanges(e, setSlctConfidence)} className='copt-ipt-number'/>
+                        </div>
+                    </div>
+                    <div className='iou-option'>
+                        <p className='iopt-title'>{GetValueFromKeys(contentCore, 'Sidebar/IoU/Title')}</p>
+                        <div className='iopt-content'>
+                            <input type="range" min="0" max="100" value={slctIOU} onChange={(e) => setSlctIOU(parseInt(e.target.value))} className='iopt-ipt-range'/>
+                            <input type="number" min="0" max="100" id="iopt-input" value={slctIOU} onChange={(e) => handleInputChanges(e, setSlctIOU)} className='iopt-ipt-number'/>
+                        </div>
+                    </div>
                 </div>
                 <div className='separator'/>
                 <div className='parent-content'>
-                    <Process contentCore={contentCore} weights={filteredWeights} listIpts={listInputs} setListIpts={setListInputs} setListOutpts={setListOutputs} isFinished={isProcessingFinished} setIsFinished={setIsProcessingFinished}/>
+                    <Process contentCore={contentCore} weights={filteredWeights} confidence={parseFloat((slctConfidence/100).toFixed(2))} iou={parseFloat((slctIOU/100).toFixed(2))} listIpts={listInputs} setListIpts={setListInputs} setListOutpts={setListOutputs} isFinished={isProcessingFinished} setIsFinished={setIsProcessingFinished}/>
                     {isProcessingFinished && (
                         <div className='output-container'>
                             <div className='refresh-container'>  {/* Refresh */}

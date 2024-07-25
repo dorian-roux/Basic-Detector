@@ -51,7 +51,7 @@ def get_job_data(pathTemp: str, jobID: str):
     return {}
 
 # - Save the Process Job Data - #
-def save_job_data(pathTemp: str, jobID: str, jobData: dict, keys: list = ['WEIGHTS', 'PROGRESS', 'RESULT']):
+def save_job_data(pathTemp: str, jobID: str, jobData: dict, keys: list = ['WEIGHTS', 'CONFIDENCE', 'IOU', 'PROGRESS', 'RESULT']):
     """Save the Process Job Data.
     Args:
         pathTemp (str): Path to the Temporary Folder.

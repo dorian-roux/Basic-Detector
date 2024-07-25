@@ -8,13 +8,13 @@
 ################
 
 # -- General -- #
+import cv2
+from flask import Blueprint, send_file, request, jsonify
 import io
 import json
-from flask import Blueprint, send_file, request, jsonify
+import numpy as np
 import os
 import ultralytics  # YOLO Models
-import cv2
-import numpy as np
 
 # -- Scripts based Import -- #
 from .utils import get_path_to_storage
@@ -66,12 +66,14 @@ def run_job_process():
             weights = json.loads(weights)
         if not isinstance(weights, list):
             weights = list(weights.values())
+        confidence = float(request.form.get('confidence'))
+        ioU = float(request.form.get('iou'))        
     except:
         return jsonify({"error": "Invalid Input Variables"}), 400
     
     nparr = np.frombuffer(file_bytes, np.uint8)
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)    
-    file_Im = detect_and_draw_detection(model, img, weights)
+    file_Im = detect_and_draw_detection(model, img, weights, confidence, ioU)
     
     # Convert the processed image back to a file format (e.g., JPEG)
     _, img_encoded = cv2.imencode('.jpg', file_Im)

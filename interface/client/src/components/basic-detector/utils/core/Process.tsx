@@ -37,6 +37,8 @@ const ProcessVideo = ({contentProcessing, progression}: {contentProcessing: any,
 interface ProcessProps {
     contentCore: any;
     weights: any;
+    confidence: number;
+    iou: number;
     listIpts: any;
     setListIpts: any;
     setListOutpts: any;
@@ -45,7 +47,7 @@ interface ProcessProps {
 }
 
 // Function | Core //
-export default function Process({contentCore, weights, listIpts, setListIpts, setListOutpts, isFinished, setIsFinished}: ProcessProps) {
+export default function Process({contentCore, weights, confidence, iou, listIpts, setListIpts, setListOutpts, isFinished, setIsFinished}: ProcessProps) {
     // Variables //
     const [isProcessing, setIsProcessing] = useState<boolean>(false);
     const [crntProcessFile, setCrntProcessFile] = useState<string>('');
@@ -60,7 +62,7 @@ export default function Process({contentCore, weights, listIpts, setListIpts, se
             const formData = new FormData();
             formData.append('video', file);
             try {
-                const response = await axios.post(`${backendURL}/source/video/launch-process`, {'weights': weights}, {headers: {'Content-Type': 'application/json'}});
+                const response = await axios.post(`${backendURL}/source/video/launch-process`, {'weights': weights, 'confidence': confidence, 'iou': iou}, {headers: {'Content-Type': 'application/json'}});
                 if (response.status !== 200) { return undefined };
                 // Run the JOB Process
                 const jobId = response.data.job_id;
@@ -99,6 +101,8 @@ export default function Process({contentCore, weights, listIpts, setListIpts, se
             const formData = new FormData();
             formData.append('image', file);
             formData.append('weights', JSON.stringify(weights));
+            formData.append('confidence', confidence.toString());
+            formData.append('iou', iou.toString());
             try {
                 const response = await axios.post(`${backendURL}/source/image/run-process`, formData, {headers: {'Content-Type': 'multipart/form-data'}, responseType: 'blob'});
                 if (response.status !== 200) { 

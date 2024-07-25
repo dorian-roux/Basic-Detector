@@ -7,6 +7,18 @@
                 "Buttons": {
                     "All": "Toutes les Catégories"
                 }
+            },
+            "Confidence": {
+                "Title": "Seuil de Confiance",
+                "Input": {
+                    "Placeholder": "Saisir un Seuil de Confiance"
+                }
+            },
+            "IoU": {
+                "Title": "Seuil d'Intersection sur Union",
+                "Input": {
+                    "Placeholder": "Saisir un Seuil d'Intersection sur Union"
+                }
             }
         },
         "Carousel": {

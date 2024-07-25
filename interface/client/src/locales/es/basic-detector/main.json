@@ -7,6 +7,18 @@
                 "Buttons": {
                     "All": "Todas las Categorías"
                 }
+            },
+            "Confidence": {
+                "Title": "Umbral de Confianza",
+                "Input": {
+                    "Placeholder": "Introducir un Umbral de Confianza"
+                }
+            },
+            "IoU": {
+                "Title": "Umbral de Intersección sobre Unión",
+                "Input": {
+                    "Placeholder": "Introducir un Umbral de Intersección sobre Unión"
+                }
             }
         },
         "Carousel": {
@@ -37,8 +49,7 @@
                 "Title": "Gestión de la Visualización",
                 "List": {
                     "Original": "Video Original",
-                    "Detection": "Video con Detecciones",
-                    "Comparison": "Comparación de Videos"
+                    "Detection": "Video con Detecciones"
                 }
             },
             "Original": {

@@ -80,6 +80,38 @@
                     };
                 };
             };
+            div.confidence-option{
+                @apply border border-dashed border-dark dark:border-light rounded p-2 mb-3 sm:mb-1.5;
+                .copt-title{
+                    @apply text-lg md:text-base sm:text-sm font-semibold underline underline-offset-4;
+                };
+                div.copt-content{
+                    @apply flex items-center justify-between mt-1;
+                    input.copt-ipt-range{
+                        @apply mr-4 sm:mr-2 bg-transparent text-center w-full font-semibold text-lg sm:text-base border border-dark dark:border-light rounded;
+                        @apply accent-rose-600 dark:accent-rose-400;
+                    };
+                    input.copt-ipt-number{
+                        @apply bg-transparent text-center min-w-max font-semibold text-lg sm:text-base border-l-2 border-dark dark:border-light;
+                    };                                    
+                };
+            };
+            div.iou-option{
+                @apply border border-dashed border-dark dark:border-light rounded p-2 mb-3 sm:mb-1.5;
+                .iopt-title{
+                    @apply text-lg md:text-base sm:text-sm font-semibold underline underline-offset-4;
+                };
+                div.iopt-content{
+                    @apply flex items-center justify-between mt-1;
+                    input.iopt-ipt-range{
+                        @apply mr-4 sm:mr-2 bg-transparent text-center w-full font-semibold text-lg sm:text-base border border-dark dark:border-light rounded;
+                        @apply accent-sky-600 dark:accent-sky-400;
+                    };
+                    input.iopt-ipt-number{
+                        @apply bg-transparent text-center min-w-max font-semibold text-lg sm:text-base border-l-2 border-dark dark:border-light;
+                    };                                    
+                };
+            };
         };
         div.separator{
             @apply border-[1.5px] border-dark dark:border-light rounded min-h-full mx-2 md:hidden;

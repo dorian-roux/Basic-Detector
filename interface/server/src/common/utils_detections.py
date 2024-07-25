@@ -116,7 +116,7 @@ def video_file_feed(pathFolderTmp: str, jobID: str, jobData: dict, videoBytes, m
         
         # Write the annotated frame to the output video
         # try:
-        out.write(detect_and_draw_detection(model, frame, jobData['WEIGHTS']))
+        out.write(detect_and_draw_detection(model, frame, jobData['WEIGHTS'], jobData['CONFIDENCE'], jobData['IOU']))
         # except Exception as e:
             # print(e)
             # out.write(frame)
