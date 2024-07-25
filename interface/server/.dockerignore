@@ -1,0 +1,29 @@
+# Virtual environment folder
+env
+venv
+
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__
+
+# Logs
+*.log
+
+# Environment variable files
+.env
+
+# IDE and OS files
+.DS_Store
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.vscode/
+
+# Git files
+.git
+.gitignore
+
+# Local configuration files
+*.local

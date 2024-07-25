@@ -1,0 +1,41 @@
+{
+  "en": {
+    "People": "People",
+    "Vehicle": "Vehicle",
+    "Traffic Items": "Traffic Items",
+    "Animals": "Animals",
+    "Accessories": "Accessories",
+    "Sports": "Sports",
+    "Kitchen Items": "Kitchen Items",
+    "Furniture": "Furniture",
+    "Electronics": "Electronics",
+    "Appliances": "Appliances",
+    "Miscellaneous": "Miscellaneous"
+  },
+  "es": {
+    "People": "Personas",
+    "Vehicle": "Vehículos",
+    "Traffic Items": "Objetos de Tráfico",
+    "Animals": "Animales",
+    "Accessories": "Accesorios",
+    "Sports": "Deportes",
+    "Kitchen Items": "Artículos de Cocina",
+    "Furniture": "Muebles",
+    "Electronics": "Electrónica",
+    "Appliances": "Electrodomésticos",
+    "Miscellaneous": "Varios"
+  },
+  "fr": {
+    "People": "Personnes",
+    "Vehicle": "Véhicules",
+    "Traffic Items": "Objets de la Circulation",
+    "Animals": "Animaux",
+    "Accessories": "Accessoires",
+    "Sports": "Sports",
+    "Kitchen Items": "Ustensiles de Cuisine",
+    "Furniture": "Meubles",
+    "Electronics": "Électronique",
+    "Appliances": "Appareils",
+    "Miscellaneous": "Divers"
+  }
+}

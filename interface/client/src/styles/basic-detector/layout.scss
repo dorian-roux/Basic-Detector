@@ -1,0 +1,93 @@
+/* -------------------------------- */
+/* STYLES / BASIC-DETECTOR | LAYOUT */
+/* -------------------------------- */
+
+/* Importing Global Styles */
+@import 'globals';
+
+/* ---------- */
+/* - Header - */
+/* ---------- */
+#md-header{
+    @apply w-full p-4 sm:p-2 font-medium no-tap-highlight;
+    @apply font-mont font-medium text-lg md:text-base sm:text-sm;
+    // - Main Container - //
+    div.parent-container{
+        @apply flex justify-between items-center;
+        // - Navigation Container - //
+        .navigation-container{
+            @apply flex items-center flex-wrap;
+            // - Logo Container - //
+            div.parent-logo-container{
+                @apply flex items-center mr-4 sm:mr-2;
+                button.btn-logo{
+                    @apply w-14 h-14 md:w-12 md:h-12 rounded-full;
+                };
+            };
+            // - About Container - //
+            div.parent-about-container{
+                @apply mr-3 sm:mr-2;
+                .link{
+                    @apply rounded py-0.5 px-1.5 sm:px-1 flex items-center;
+                    .ic{
+                        @apply ml-1 w-8 sm:w-6 h-auto;
+                    };
+                };
+            };
+            // - Theme Container - //
+            div.parent-theme-container{
+                @apply mx-3 sm:mx-2;
+                button.btn-theme{
+                    @apply flex items-center w-16 sm:w-12 h-8 sm:h-6 rounded-full;
+                    @apply border border-yellow-500 dark:border-light focus:outline-none shadow-md;
+                    #switch-toggle{
+                        @apply flex justify-center items-center w-8 sm:w-6 h-8 sm:h-6 rounded-full transform transition duration-500;
+                        @apply border border-light text-white;
+                        .ic{
+                            @apply w-6 sm:w-4 h-auto;
+                        };
+                    };
+                };
+            };
+            // - Language Container - //
+            div.parent-lang-container{
+                @apply ml-3 sm:ml-2;
+            };
+        };
+    };
+};
+
+
+/* ---------- */
+/* - Footer - */
+/* ---------- */
+#md-footer{
+    @apply w-full p-4 sm:p-2 no-tap-highlight;
+    @apply font-mont font-medium text-lg md:text-base sm:text-sm;
+    // - Main Container - //
+    div.parent-container{
+        @apply flex items-center justify-between md:flex-col;
+        // - Child Container - //
+        div.child-container{
+            @apply flex items-center md:mt-1;
+            p{
+                @apply mx-1;
+            };
+            // - Link Tools Container - //
+            div.link-tools-container{
+                .link{
+                    @apply flex rounded-full border border-dashed border-dark dark:border-light;
+                    .ic{
+                        @apply p-1 w-8 sm:w-6 h-auto;
+                    };
+                };
+            };
+            // - Link Website Container - //
+            div.link-website-container{
+                .link{
+                    @apply flex border-b border-dark dark:border-light;
+                };
+            };
+        };
+    };
+};

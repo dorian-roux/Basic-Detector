@@ -1,0 +1,62 @@
+/* ------------------------------------------ */
+/* STYLES / BASIC-DETECTOR | UTILS / CAROUSEL */
+/* ------------------------------------------ */
+
+/* Importing Global Styles */
+@import '../globals';
+
+
+/* ------------------ */
+/* - Video Carousel - */
+/* ------------------ */
+
+#video-carousel{
+    div.vcrsl-parent-title{
+        @apply text-center mb-2 sm:mb-1;
+        p{
+            @apply inline-block text-xl lg:text-lg md:text-base sm:text-sm font-semibold italic;
+            @apply border-b-2 sm:border-b-[1.5px] border-dark dark:border-light;
+        };
+    };
+    div.vcrsl-parent-content{
+        @apply overflow-hidden relative mx-16 lg:mx-12 md:mx-8 sm:mx-2 rounded;
+        div.vcrsl-video-content{
+            @apply flex transition ease-out duration-300;
+            .itm-video{
+                @apply min-w-full border-2 border-dark dark:border-light rounded;
+            };
+        };
+        div.vcrsl-pgntn-content{
+            @apply absolute inset-0 flex justify-between items-start pointer-events-none  mt-1 sm:mt-0.5 mx-1 sm:mx-0.5;
+            .itm-btn{
+                @apply rounded-full pointer-events-auto;
+                .ic{
+                    @apply w-7 md:w-6 sm:w-5 h-auto text-light dark:text-dark stroke-dark dark:stroke-white;
+                };
+            };
+        };
+        div.vcrls-under-content{
+            @apply flex justify-between;
+            div.tags{
+                @apply sm:block flex justify-center items-center;
+                div.item-tag{
+                    @apply flex items-center mx-1 sm:mx-0.5;
+                    p.tag-content{
+                        @apply text-sm sm:text-xs xs:text-[0.7rem] italic;
+                    };
+                    .tag-color-ic{
+                        @apply ml-1 w-4 sm:w-3.5 h-auto;
+                    };
+
+                };
+              
+            };
+            div.dots{
+                @apply flex justify-center mt-2;
+                .itm-dot{
+                    @apply w-3.5 md:w-3 sm:w-2.5 md:h-3 h-3.5 sm:h-2.5 border border-dark dark:border-light rounded-full mx-1 sm:mx-0.5;
+                };
+            };
+        };
+    };
+};

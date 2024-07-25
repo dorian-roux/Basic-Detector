@@ -1,0 +1,66 @@
+{
+    "Title": "Detector Básico",
+    "Core": {
+        "Sidebar": {
+            "Detection": {
+                "Title": "Selección de Detecciones",
+                "Buttons": {
+                    "All": "Todas las Categorías"
+                }
+            }
+        },
+        "Carousel": {
+            "Title": "Videos de Demostración",
+            "Video": {
+                "Unavailable": "Tu Navegador no parece soportar este Video"
+            }
+        },
+        "Upload": {
+            "Title": "<span style='font-weight: bold;'>Hacer Clic para Cargar</span> o Arrastrar y Soltar",
+            "Subtitle1": "MP4, MOV, AVI, WMV, etc.",
+            "Subtitle2": "* Múltiples Archivos Aceptados",
+            "Waiting": "<span style='font-weight: bold;'>Carga Desactivada</span> durante la Fase de Procesamiento"
+        },
+        "Processing": {
+            "File": "Procesando Archivo: ",
+            "Video": {
+                "Upload": "Paso #1 | Extracción de Video",
+                "Compute": "Paso #2 | Cálculo de Detecciones",
+                "Build": "Paso #3 | Construcción del Video Final"
+            }
+        },
+        "Results": {
+            "Files": {
+                "Title": "Archivos:"
+            },
+            "DisplayOptions": {
+                "Title": "Gestión de la Visualización",
+                "List": {
+                    "Original": "Video Original",
+                    "Detection": "Video con Detecciones",
+                    "Comparison": "Comparación de Videos"
+                }
+            },
+            "Original": {
+                "Title": "Video Original"
+            },
+            "Detection": {
+                "Title": "Video con Detecciones"
+            },
+            "Video": {
+                "Unavailable": "Tu Navegador no parece soportar este Video"
+            },
+            "Refresh": {
+                "Single": "Reiniciar la Detección en este Archivo",
+                "Multiple": "Reiniciar las Detecciones en Todos los Archivos"
+            },
+            "Download": {
+                "Title": "Descargar Video con Detecciones",
+                "Filename": {
+                    "Prefix": "video",
+                    "Suffix": "detección"
+                }
+            }
+        }
+    }
+}

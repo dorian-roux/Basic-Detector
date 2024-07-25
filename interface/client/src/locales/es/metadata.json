@@ -1,0 +1,10 @@
+{
+    "Locale": {
+        "Title": "Página de inicio",
+        "Description": ""
+    },
+    "NotFound": {
+        "Title": "404 - Página no encontrada",
+        "Description": "No se pudo encontrar la página actual"
+    }
+}

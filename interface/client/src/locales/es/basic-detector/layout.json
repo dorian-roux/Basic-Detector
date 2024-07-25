@@ -1,0 +1,10 @@
+{
+    "Header": {
+        "About": "Acerca de"
+    },
+    "Footer": {
+        "Copyright": "Todos los Derechos Reservados",
+        "Build": "diseñado por",
+        "Author": "Dorian ROUX"
+    }
+}

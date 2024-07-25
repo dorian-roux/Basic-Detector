@@ -1,0 +1,228 @@
+/* ------------------------------ */
+/* STYLES / BASIC-DETECTOR | MAIN */
+/* ------------------------------ */
+
+/* Importing Global Styles */
+@import 'globals';
+
+/* -------- */
+/* - MAIN - */
+/* -------- */
+#md-main{
+    @apply w-full p-4 sm:p-2;
+    div.parent-title{
+        @apply text-center mb-4 sm:mb-2;
+        h1{
+            @apply text-3xl lg:text-2xl md:text-xl sm:text-lg font-bold;
+        };
+    };
+    div.parent-options{
+        @apply text-center my-4 sm:my-2;
+        h3.title{
+            @apply text-lg md:text-base sm:text-sm font-semibold;
+        };
+        div.child-options{
+            @apply flex justify-center items-center;
+            button.btn{
+                @apply px-4 py-2 sm:px-2 sm:py-1.5 mx-4 sm:mx-2 my-2 rounded;
+                @apply border-2 border-dark dark:border-light bg-blue-300 dark:bg-blue-600 ;
+                @apply sm:text-sm xs:text-xs font-semibold;
+            };
+        };
+    };
+    hr.divider{
+        @apply my-4 sm:my-2 border-[1.5px] rounded border-dark dark:border-light;
+    };
+};
+
+
+/* -------------- */
+/* - Video File - */
+/* -------------- */
+#video-file-container{
+    div.parent-title{
+        @apply text-center mb-4 sm:mb-2;
+        h2{
+            @apply text-2xl lg:text-xl md:text-lg sm:text-base font-bold;
+        };
+    };
+    div.parent-container{
+        @apply flex md:block justify-center;
+        div.sidebar{
+            @apply min-w-max md:my-4;
+            div.detection-option{
+                @apply border border-dashed border-dark dark:border-light rounded p-2 mb-3 sm:mb-1.5;
+                .dopt-title{
+                    @apply text-lg md:text-base sm:text-sm font-semibold underline underline-offset-4;
+                };
+                div.dopt-content{
+                    @apply mt-2 sm:mt-1 md:h-48 sm:h-32 md:overflow-y-auto;
+                    div.dopt-item{
+                        @apply flex justify-start items-center my-1 sm:my-0.5;
+                        div.color-container{
+                            @apply relative mr-2.5 sm:mr-2;
+                            .color-ipt{
+                                @apply h-full absolute inset-0 opacity-0 z-10 cursor-pointer w-6 sm:w-5;
+                            };
+                            .color-ic{
+                                @apply w-6 sm:w-5 h-auto;
+                            };
+                        };
+                        input.dopt-input{
+                            @apply w-3.5 h-3.5 sm:w-3 sm:h-3 accent-green-600 dark:accent-green-500;
+                        };
+                        label.dopt-label{
+                            @apply cursor-pointer ml-1 text-base sm:text-sm;
+                        };
+                        label.dopt-all-label{
+                            @apply font-medium;
+                        };
+                    };
+                };
+            };
+        };
+        div.separator{
+            @apply border-[1.5px] border-dark dark:border-light rounded min-h-full mx-2 md:hidden;
+        };
+        div.parent-content{
+            @apply w-full md:my-4;
+            
+            div.output-container{
+                @apply w-full;
+                div.refresh-container{
+                    @apply flex justify-center mb-4;
+                    button.refresh-btn{
+                        @apply bg-white dark:bg-dark shadow-lg rounded sm:text-xs xs:text-[0.7rem] flex justify-end items-center border border-dashed border-dark dark:border-light px-2 sm:px-1.5 py-1.5 sm:py-0.5;
+                        .icon-refresh{
+                            @apply w-6 sm:w-4 h-auto ml-2 sm:ml-1;
+                        };
+                    };
+                };
+                div.output-files-ctnr{
+                    @apply border border-dark dark:border-light p-1 shadow max-h-64 md:max-h-48 sm:max-h-32 overflow-y-auto;
+                    h3.output-fctnr-title{
+                        @apply text-lg mb-2 md:text-base sm:text-sm font-semibold underline underline-offset-4;
+                    };
+                    p.output-fctnr-item{
+                        @apply cursor-pointer ml-2 sm:ml-1 my-1 text-base sm:text-sm xs:text-xs;
+                    };
+                };
+                div.output-main-opts{
+                    @apply text-center my-4 sm:my-2;
+                    div.output-parent-options{
+                        @apply inline-block;
+                        hr.line-divider{
+                            @apply my-2 sm:my-1 border border-dashed rounded border-dark dark:border-light;
+                        };
+                        h3.title{
+                            @apply text-lg md:text-base sm:text-sm font-semibold;
+                        };
+                        div.child-options{
+                            @apply flex justify-center items-center;
+                            button.btn{
+                                @apply px-4 py-2 sm:px-2 sm:py-1.5 mx-4 sm:mx-2 my-2 rounded;
+                                @apply border border-dark dark:border-light bg-amber-300 dark:bg-amber-600 ;
+                                @apply sm:text-sm xs:text-xs font-semibold;
+                            };
+                        };
+                    };
+                };
+                div.comparison-container{
+                    @apply flex lg:block justify-center;
+                };
+                div.original-container, div.detection-container{
+                    @apply text-center mt-4 sm:mt-2;
+                    h3{
+                        @apply inline-block text-lg md:text-base sm:text-sm font-semibold border-b border-dark dark:border-light;
+                    };
+                    div.video-container{
+                        @apply flex justify-center items-center mt-2 mx-24 xl:mx-16 lg:mx-8 sm:mx-4;
+                        video{
+                            @apply w-full object-cover h-auto;
+                            @apply rounded shadow-lg;
+                            @apply border-2 border-dark dark:border-light;
+                        };
+                    };
+                };
+            };
+            div.download-container{
+                @apply flex justify-end mt-2;
+                button.download-btn{
+                    @apply bg-white dark:bg-dark shadow-lg rounded sm:text-xs xs:text-[0.7rem] flex justify-end items-center border border-dashed border-dark dark:border-light px-2 sm:px-1.5 py-1.5 sm:py-0.5;
+                    .icon-download{
+                        @apply w-6 sm:w-4 h-auto ml-2 sm:ml-1;
+                    };
+                };
+            };
+        };
+    };
+};
+
+// - Processing - //
+#processing{
+    // -- Upload Files -- //
+    div.upload-files{
+        @apply w-full flex justify-center items-center mb-6 sm:mb-3;
+        label.dropzone{
+            @apply flex flex-col items-center justify-center px-4 py-3 sm:px-2 sm:py-2 rounded cursor-pointer;
+            @apply border-2 border-gray-800 dark:border-gray-200 border-dashed;
+            @apply bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700;
+            div.content{
+                @apply flex flex-col items-center justify-center text-center;             
+                .icon-upload{
+                    @apply w-8 sm:w-6 h-auto mb-2 sm:mb-1;
+                };
+                .icon-disabled{
+                    @apply opacity-60
+                };
+                p.filename{
+                    @apply mb-2 text-base md:text-sm sm:text-xs font-semibold text-dark dark:text-light;
+                    @apply border-b-2 border-dark dark:border-light;
+                };
+                p.main{
+                    @apply mb-2 text-sm md:text-xs sm:text-[0.70rem] text-gray-600 dark:text-gray-400
+                };
+                p.sub{
+                    @apply text-xs md:text-[0.70rem] sm:text-[0.65rem] text-gray-600 dark:text-gray-400;
+                };
+            };
+        };
+        label.dropzone[aria-disabled="true"]{
+            @apply opacity-50 hover:bg-gray-50 hover:dark:bg-gray-800;
+            div.content{
+                .icon-upload{
+                    @apply opacity-50
+                };
+            };
+        };  
+    };
+    div.processing-prgrs{
+        @apply px-2 sm:px-1 py-2 rounded border border-dark dark:border-light text-center;
+        p.p-prgrs-title{
+            @apply text-left text-base md:text-sm sm:text-xs font-semibold;
+            span.p-prgrs-t-filename{
+                @apply text-dark dark:text-light font-semibold;
+            };
+        };
+        hr.p-prgrs-divider{
+            @apply my-2 border border-dashed rounded border-dark dark:border-light;
+        };
+    };
+};
+
+
+
+
+
+/* ------------------------ */
+/* - Live Camera / Webcam - */
+/* ------------------------ */
+#live-camera-container{
+    @apply flex justify-center items-center;
+    div.parent-container{
+        video.live-video{
+            @apply w-[32rem] lg:w-[24rem] md:w-[20rem] sm:w-[16rem] object-cover h-auto rounded shadow-lg;
+            @apply border-2 border-dark dark:border-light;
+        };
+    };
+};

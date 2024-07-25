@@ -1,0 +1,66 @@
+{
+    "Title": "Basic Detector",
+    "Core": {
+        "Sidebar": {
+            "Detection": {
+                "Title": "Detection Selection",
+                "Buttons": {
+                    "All": "All Categories"
+                }
+            }
+        },
+        "Carousel": {
+            "Title": "Demonstration Videos",
+            "Video": {
+                "Unavailable": "Your Browser does not appear to support this Video"
+            }
+        },
+        "Upload": {
+            "Title": "<span style='font-weight: bold;'>Click to Load</span> or Drag and Drop",
+            "Subtitle1": "MP4, MOV, AVI, WMV, etc.",
+            "Subtitle2": "* Multiple Files Accepted",
+            "Waiting": "<span style='font-weight: bold;'>Loading Disabled</span> during Processing Phase"
+        },
+        "Processing": {
+            "File": "Processing File: ",
+            "Video": {
+                "Upload": "Step #1 | Video Extraction",
+                "Compute": "Step #2 | Detection Calculation",
+                "Build": "Step #3 | Final Video Construction"
+            }
+        },
+        "Results": {
+            "Files": {
+                "Title": "Files:"
+            },
+            "DisplayOptions": {
+                "Title": "Display Management",
+                "List": {
+                    "Original": "Original Video",
+                    "Detection": "Video with Detections",
+                    "Comparison": "Video Comparison"
+                }
+            },
+            "Original": {
+                "Title": "Original Video"
+            },
+            "Detection": {
+                "Title": "Video with Detections"
+            },
+            "Video": {
+                "Unavailable": "Your Browser does not appear to support this Video"
+            },
+            "Refresh": {
+                "Single": "Rerun Detection on this File",
+                "Multiple": "Rerun Detections on All Files"
+            },
+            "Download": {
+                "Title": "Download Video with Detections",
+                "Filename": {
+                    "Prefix": "video",
+                    "Suffix": "detection"
+                }
+            }
+        }
+    }
+}

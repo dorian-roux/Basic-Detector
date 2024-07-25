@@ -1,7 +1,7 @@
 # Basic Detector | Scripts 
 
 > Made by [**_Dorian ROUX_**](https://rouxdorian.com), Data Scientist and Software Engineer.  
-> Last Update: 2024-07-23  
+> Last Update: 2024-07-25
 > Version: 1.1.0
 
 

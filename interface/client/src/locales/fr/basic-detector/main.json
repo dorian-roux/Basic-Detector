@@ -1,0 +1,65 @@
+{
+    "Title": "Détecteur Basique",
+    "Core": {
+        "Sidebar": {
+            "Detection": {
+                "Title": "Choix des Détections",
+                "Buttons": {
+                    "All": "Toutes les Catégories"
+                }
+            }
+        },
+        "Carousel": {
+            "Title": "Vidéos Démonstratives",
+            "Video": {
+                "Unavailable": "Votre Navigateur ne semble pas supporter cette Vidéo"
+            }
+        },
+        "Upload": {
+            "Title": "<span style='font-weight: bold;'>Cliquer pour Charger</span> ou Glisser et Déposer",
+            "Subtitle1": "MP4, MOV, AVI, WMV, JPG, PNG, etc.",
+            "Subtitle2": "* Multiples Fichiers Acceptés",
+            "Waiting": "<span style='font-weight: bold;'>Chargement Désactivé</span> durant la Phase de Traitement"
+        },
+        "Processing": {
+            "File": "En cours de traitement : ",
+            "Video": {
+                "Upload": "Étape #1 | Extraction de la Vidéo",
+                "Compute": "Étape #2 | Calcul des Détections",
+                "Build": "Étape #3 | Construction de la Vidéo Finale"
+            }
+        },
+        "Results": {
+            "Files": {
+                "Title": "Les Fichiers :"
+            },
+            "DisplayOptions": {
+                "Title": "Gestion de l'Affichage",
+                "List": {
+                    "Original": "Originale",
+                    "Detection": "Détections"
+                }
+            },
+            "Original": {
+                "Title": "Originale"
+            },
+            "Detection": {
+                "Title": "Détections"
+            },
+            "Video": {
+                "Unavailable": "Votre Navigateur ne semble pas supporter cette Vidéo"
+            },
+            "Refresh": {
+                "Single": "Relancer la Détection sur ce Fichier",
+                "Multiple": "Relancer les Détections sur l'Ensemble des Fichiers"
+            },
+            "Download": {
+                "Title": "Enregistrer le Fichier avec les Détections",
+                "Filename": {
+                    "Prefix": "",
+                    "Suffix": "détection"
+                }
+            }
+        }
+    }
+}

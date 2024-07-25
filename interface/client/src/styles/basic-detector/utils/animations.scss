@@ -1,0 +1,60 @@
+/* -------------------------------------------- */
+/* STYLES / BASIC-DETECTOR | UTILS / ANIMATIONS */
+/* -------------------------------------------- */
+
+/* Importing Global Styles */
+@import '../globals';
+
+
+/* -------------- */
+/* - KEY Frames - */
+/* -------------- */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+};
+  
+.basic-spin{
+    animation: spin 1.5s linear infinite;
+};
+
+
+/* ------------ */
+/* - A_Circle - */
+/* ------------ */
+
+div.a-circle{
+    div.child{
+        @apply flex justify-center items-center;
+        div.text-ctnr{
+            @apply text-lg sm:text-base xs:text-sm font-semibold;
+        };
+        div.item-ctnr{
+            @apply ml-4 sm:ml-2;
+            div.circle{
+                @apply basic-spin w-8 h-8 sm:w-6 sm:h-6 rounded-full;
+                @apply border-4 border-blue-800 dark:border-blue-200 border-t-transparent dark:border-t-transparent;
+            };
+        };
+    };
+};
+
+
+/* ------------------ */
+/* - A_Progress_Bar - */
+/* ------------------ */
+
+div.a-prgs-bar{
+    div.text-ctnr{
+        @apply text-lg sm:text-base xs:text-sm font-semibold;
+    };
+    div.item-ctnr{
+        @apply my-1.5 sm:my-1 w-full h-auto rounded flex justify-between items-center bg-gray-100 dark:bg-gray-800;
+        @apply border-2 border-dark dark:border-light;
+        div.inner{
+            @apply overflow-hidden flex justify-end items-center h-full rounded bg-emerald-300 dark:bg-emerald-600 border-r-2 border-r-dark dark:border-r-light;
+            @apply font-semibold pr-1;
+        };
+    };
+};

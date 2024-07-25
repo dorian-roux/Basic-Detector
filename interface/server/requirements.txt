@@ -1,0 +1,19 @@
+#######################
+# Python Requirements #
+#######################
+
+# Frameworks
+flask
+flask_cors
+flask_sqlalchemy
+
+# Video, Audio, DL and ML
+moviepy
+numpy
+opencv-python
+opencv-python-headless
+ultralytics 
+
+# Utilities 
+tqdm
+unidecode
