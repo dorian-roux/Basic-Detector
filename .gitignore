@@ -1,0 +1,5 @@
+data/
+env/
+*.pt
+__pycache__/
+.vscode/
