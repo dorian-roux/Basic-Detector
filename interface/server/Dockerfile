@@ -30,4 +30,4 @@ EXPOSE 8080
 RUN pip install gunicorn
 
 # Command to start the app with Gunicorn
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8080", "server:app"]
+CMD ["gunicorn", "-w", "4", "--timeout", "3600", "-b", "0.0.0.0:8080", "server:app"]

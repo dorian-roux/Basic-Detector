@@ -11,6 +11,7 @@ import cv2
 from moviepy.editor import VideoFileClip
 import numpy as np
 import os
+from unidecode import unidecode
 
 # -- Scripts based Import -- #
 from .utils_jobs import save_job_data
@@ -70,7 +71,7 @@ def detect_and_draw_detection(model, frame: np.ndarray, categories: list, confid
             if (not categoryName) or (not categoryColor):  # Skip if category name or color is not found
                 continue
             cv2.rectangle(output_frame, (x1, y1), (x2, y2), tuple(categoryColor)[::-1], 4)  # Draw bounding box
-            cv2.putText(output_frame, f'{categoryName} {scores[i]:.2f}', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, tuple(categoryColor)[::-1], 2)  # Draw label
+            cv2.putText(output_frame, f'{unidecode(categoryName)} {scores[i]:.2f}', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, tuple(categoryColor)[::-1], 2)  # Draw label
 
     # Return the frame
     return output_frame
